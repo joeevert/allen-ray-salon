@@ -5,13 +5,38 @@
 
 .topNav a {
   display: inline;
+  position: relative;
   color: #ffffff;
   text-align: center;
-  padding: 15px 25px;
+  padding: 10px 0px;
+  margin: 15px 25px;
+
   text-decoration: none;
   font-weight: bold;
 }
 
-.topNav a:hover {
-  color: #fcf0b6;
+.topNav a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.topNav a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

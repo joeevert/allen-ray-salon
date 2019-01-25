@@ -15,7 +15,7 @@ const styles = {
   banner: {
     color: '#fcf0b6',
     padding: '15px',
-    letterSpacing: '3px'
+    letterSpacing: '3px',
   }
 }
 
@@ -27,7 +27,7 @@ class NavBar extends Component {
         <div className={classes.appBar}>
           <span>
             <Typography className={classes.banner}>
-              BOOK AN APPOINTMENT 612.208.0273
+              <a href="#book">BOOK AN APPOINTMENT 612.208.0273</a>
             </Typography>
           </span>
           <img className={classes.logo} src="/images/allen_ray_logo.jpg" alt="allen ray logo" />
