@@ -9,7 +9,7 @@ const styles = {
     backgroundColor: 'hsla(0, 0%, 25%, 1)',
   },
   logo: {
-    width: '60%',
+    width: '35%',
     padding: '60px',
   },
   banner: {
