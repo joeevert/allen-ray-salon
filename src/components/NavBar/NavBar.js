@@ -8,9 +8,14 @@ const styles = {
   appBar: {
     backgroundColor: 'hsla(0, 0%, 25%, 1)',
   },
+  logoContainer: {
+    margin: 'auto',
+    padding: '55px',
+    maxWidth: '55%',
+  },
   logo: {
-    width: '35%',
-    padding: '60px',
+    width: '100%',
+    height: 'auto'
   },
   banner: {
     color: '#fcf0b6',
@@ -30,7 +35,9 @@ class NavBar extends Component {
               <a href="#book">BOOK AN APPOINTMENT 612.208.0273</a>
             </Typography>
           </span>
-          <img className={classes.logo} src="/images/allen_ray_logo.jpg" alt="allen ray logo" />
+          <div className={classes.logoContainer}>
+            <img className={classes.logo} src="images/allen_ray_logo.jpg" alt="allen ray logo" />
+          </div>
         </div>
         <div className="topNav">
           <a href="#home" className="active">HOME</a>

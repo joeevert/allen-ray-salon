@@ -1,7 +1,10 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .topNav {
-  /* background-color: hsla(0, 0%, 15%, 1); */
-  padding: 15px;
-  margin-bottom: 25px;
+  /* padding: 15px; */
 }
 
 .topNav a {
@@ -9,7 +12,7 @@
   position: relative;
   color: #ffffff;
   text-align: center;
-  padding: 10px 0px;
+  padding: 5px 0px;
   margin: 15px 25px;
   text-decoration: none;
 }
@@ -35,7 +38,9 @@
   transform: scaleX(1);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.banner {
+  color: #fcf0b6;
+  padding: 15px;
+  letter-spacing: 3px;
 }
+
