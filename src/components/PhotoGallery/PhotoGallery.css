@@ -4,49 +4,29 @@
   padding: 40px 0px; 
 }
 
-.each-slide > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  height: 600px;
-  width: auto;
+.slide {
+  text-align: center; 
+  position: relative;
 }
 
-.image {
+.slide-tag {
+  color: #ffffff; 
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  padding: 1em; 
+  position: absolute; 
+  top: 0px; 
+  left: 0px;
+}
+
+.slide-testomonial {
   width: 100%;
-  /* height: auto; */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5em; 
+  position: absolute; 
+  bottom: 0px; 
 }
 
-.tag-line {
-  color: aqua;
-}
-
-/* .each-slide span {
-  padding: 20px;
-  font-size: 20px;
-  background: #efefef;
-  text-align: center;
-} */
-
-/* .each-fade {
-  display: flex;
-}
-
-.each-fade .image-container {
-  width: 75%;
-  overflow: hidden;
-}
-
-.each-fade .image-container img {
+.photoStyle {
   width: 100%;
+  height: auto;
 }
-
-.each-fade h2 {
-  width: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  background: #adceed;
-} */

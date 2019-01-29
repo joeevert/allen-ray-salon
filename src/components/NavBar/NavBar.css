@@ -1,10 +1,17 @@
-a {
-  text-decoration: none;
-  color: inherit;
+ul {
+  padding: 0px;
+  margin: auto;
+}
+
+li {
+  list-style-type: none;
+  margin: 5px auto;
+  padding: 0px;
 }
 
 .topNav {
-  /* padding: 15px; */
+  position: sticky;
+  top: 0;
 }
 
 .topNav a {
@@ -13,7 +20,7 @@ a {
   color: #ffffff;
   text-align: center;
   padding: 5px 0px;
-  margin: 15px 25px;
+  margin: 0px 20px;
   text-decoration: none;
 }
 
@@ -38,9 +45,38 @@ a {
   transform: scaleX(1);
 }
 
-.banner {
+/* .banner {
   color: #fcf0b6;
   padding: 15px;
   letter-spacing: 3px;
+  text-decoration: none;
+  pointer-events: none;
+} */
+
+/* .banner a:hover {
+  color: #fcf0b6;
+  padding: 15px;
+  letter-spacing: 15px;
+  text-decoration: none;
+} */
+
+/* unvisited link */
+a:link {
+  color: #fcf0b6;
 }
 
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: #ffffff;
+}
