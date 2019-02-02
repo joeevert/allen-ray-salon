@@ -9,8 +9,6 @@ import Divider from '@material-ui/core/Divider';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import purple from "@material-ui/core/colors/purple";
-
 import Button from '@material-ui/core/Button';
 
 class ContactForm extends Component {
@@ -34,7 +32,7 @@ class ContactForm extends Component {
         <Typography className={classes.title} variant="h5">
           CONTACT US
         </Typography>
-        {/* <Paper className={classes.paper}> */}
+        <Paper className={classes.paper}>
           <form className={classes.form}>
             <Grid container spacing={24}>
               <Grid item xs={12} sm={6}>
@@ -73,6 +71,21 @@ class ContactForm extends Component {
                   fullWidth
                   variant="outlined"
                   autoComplete="email"
+                  InputLabelProps={{
+                    classes: {
+                      root: classes.cssLabel,
+                      focused: classes.cssFocused,
+
+                    },
+                  }}
+                  InputProps={{
+                    classes: {
+                      root: classes.cssOutlinedInput,
+                      focused: classes.cssFocused,
+                      notchedOutline: classes.notchedOutline,
+                      input: classes.input
+                    },
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -83,6 +96,21 @@ class ContactForm extends Component {
                   fullWidth
                   variant="outlined"
                   autoComplete="subject"
+                  InputLabelProps={{
+                    classes: {
+                      root: classes.cssLabel,
+                      focused: classes.cssFocused,
+
+                    },
+                  }}
+                  InputProps={{
+                    classes: {
+                      root: classes.cssOutlinedInput,
+                      focused: classes.cssFocused,
+                      notchedOutline: classes.notchedOutline,
+                      input: classes.input
+                    },
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -93,11 +121,29 @@ class ContactForm extends Component {
                   fullWidth
                   variant="outlined"
                   autoComplete="message"
+                  InputLabelProps={{
+                    classes: {
+                      root: classes.cssLabel,
+                      focused: classes.cssFocused,
+
+                    },
+                  }}
+                  InputProps={{
+                    classes: {
+                      root: classes.cssOutlinedInput,
+                      focused: classes.cssFocused,
+                      notchedOutline: classes.notchedOutline,
+                      input: classes.input
+                    },
+                  }}
                 />
+              </Grid>
+              <Grid item xs={12}>
+                <Button>SEND</Button>
               </Grid>
             </Grid>
           </form>
-        {/* </Paper> */}
+        </Paper>
         {/* <Divider className={classes.divider}/> */}
       </React.Fragment>
     );
@@ -110,9 +156,9 @@ const styles = {
     margin: 'auto'
   },
   form: {
-    width: '65%',
+    // width: '65%',
     margin: 'auto',
-    // padding: 25
+    padding: 25
   },
   title: {
     color: '#ffffff',
@@ -120,7 +166,7 @@ const styles = {
   },
   textField: {
     borderRadius: '4px',
-    backgroundColor: '#ddd'
+    // backgroundColor: '#ddd'
   },
   divider: {
     margin: '10px auto',
