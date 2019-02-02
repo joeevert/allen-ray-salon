@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import logo from './allen_ray_logo.svg';
+import Header from './Header';
 import './NavBar.css';
 
 // React Strap
@@ -13,8 +13,6 @@ import {
 
 // Material UI
 import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
 
 class NavBar extends Component {
 
@@ -32,15 +30,10 @@ class NavBar extends Component {
     const { classes } = this.props;
     return (
       <section>
-        <div>
-          <a className="banner" href="#book">BOOK AN APPOINTMENT 612.208.0273</a>
-          <div className={classes.logoContainer}>
-            <img className={classes.logo} src="images/allen_ray_logo.svg" alt="allen ray logo" />
-          </div>
-        </div>
+        <Header />
         <Navbar light expand="md">
-          <NavbarToggler style={{backgroundColor: '#fff', margin: 'auto'}} onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
+          {/* <NavbarToggler style={{backgroundColor: '#fff', margin: 'auto'}} onClick={this.toggle} /> */}
+          {/* <Collapse isOpen={this.state.isOpen} navbar> */}
             <Nav className="ml-auto topNav" navbar>
               <NavItem>
                 <NavLink className="text-white" href="#home">HOME</NavLink>
@@ -61,7 +54,7 @@ class NavBar extends Component {
                 <NavLink className="text-white" href="#careers">CAREERS</NavLink>
               </NavItem>
             </Nav>
-          </Collapse>
+          {/* </Collapse> */}
         </Navbar>
       </section>
     );

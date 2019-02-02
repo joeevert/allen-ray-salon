@@ -40,24 +40,23 @@ class PhotoGallery extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <section>
+      <React.Fragment>
         <div className="slide-container">
           <Slide {...properties} >
             {slideImages.map( (slide, index) => 
             <div key={index} className="slide">
-              <img src={slide.image} className="photoStyle" />
+              <img src={slide.image} className="photoStyle" alt="slide" />
               <span className="slide-tag">
                 <Typography className={classes.tag} variant="h2">{slide.tag}</Typography>
               </span>
               <div className="slide-testomonial">
                 <Typography className={classes.testomonial}>{slide.testomonial}</Typography>
-                {/* <Typography className={classes.testomonial}>{slide.name}</Typography> */}
               </div>
             </div>)}
           </Slide>
         </div>
         <Divider className={classes.divider}/>
-        <Typography className={classes.tagLine}>
+        <Typography className={classes.tagLine} variant="h5">
           AWARD-WINNING SALON IN DOWNTOWN MINNEAPOLIS
         </Typography>
         <Divider className={classes.divider}/>
@@ -66,7 +65,7 @@ class PhotoGallery extends Component {
         >
           BOOK AN APPOINTMENT
         </Button>
-      </section>
+      </React.Fragment>
     );
   }
 }
@@ -89,7 +88,7 @@ const styles= {
   },
   testomonial: {
     color: '#fcf0b6',
-    fontSize: '.75em'
+    fontSize: '1em'
   },
 }
 

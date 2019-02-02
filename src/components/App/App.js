@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 
 // FontAwesome
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+// import { library } from '@fortawesome/fontawesome-svg-core';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-// Material UI
 import NavBar from '../NavBar/NavBar';
 import PhotoGallery from '../PhotoGallery/PhotoGallery';
+import ContactForm from '../ContactForm/ContactForm';
 import Footer from  '../Footer/Footer';
-library.add(faBars)
+
+// library.add(faBars)
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <PhotoGallery />
+        <ContactForm />
         <Footer />
       </div>
     );

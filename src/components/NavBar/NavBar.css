@@ -10,8 +10,8 @@ li {
 }
 
 .topNav {
-  position: sticky;
-  top: 0;
+  /* position: sticky; */
+  /* top: 0; */
 }
 
 .topNav a {
@@ -45,34 +45,24 @@ li {
   transform: scaleX(1);
 }
 
-/* .banner {
-  color: #fcf0b6;
-  padding: 15px;
+.appointment {
   letter-spacing: 3px;
-  text-decoration: none;
-  pointer-events: none;
-} */
-
-/* .banner a:hover {
-  color: #fcf0b6;
-  padding: 15px;
-  letter-spacing: 15px;
-  text-decoration: none;
-} */
+  padding: 1em;
+}
 
 /* unvisited link */
 a:link {
-  color: #fcf0b6;
+  color: #FCF0b6;
 }
 
 /* visited link */
 a:visited {
-  color: green;
+  color: #FFF8D7;
 }
 
 /* mouse over link */
 a:hover {
-  color: hotpink;
+  color: #AF9D47;
   text-decoration: none;
 }
 
