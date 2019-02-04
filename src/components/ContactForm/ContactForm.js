@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SimpleMap from './SimpleMap';
 import './ContactForm.css';
 
 // Material UI
@@ -20,8 +21,16 @@ class ContactForm extends Component {
     message: ''
   }
 
-  handleChange = () => {
+  handleChange = (event) => {
+    this.setState({
+      ...this.state,
+      [event.target.name]: event.target.value,
+    })
+  };
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+    
   };
 
   render() {
@@ -33,23 +42,24 @@ class ContactForm extends Component {
           CONTACT US
         </Typography>
         <Paper className={classes.paper}>
-          <form className={classes.form}>
+          <form className={classes.form} onSubmit={this.handleSubmit}>
             <Grid container spacing={24}>
               <Grid item xs={12} sm={6}>
                 <TextField
                   className={classes.textField}
                   required
-                  id="firstName"
-                  name="firstName"
-                  label="First name"
+                  id="name"
+                  name="name"
+                  label="Name"
+                  value={this.state.name}
+                  onChange={this.handleChange}
                   fullWidth
                   variant="outlined"
-                  autoComplete="fname"
+                  autoComplete="name"
                   InputLabelProps={{
                     classes: {
                       root: classes.cssLabel,
                       focused: classes.cssFocused,
-
                     },
                   }}
                   InputProps={{
@@ -68,6 +78,8 @@ class ContactForm extends Component {
                   id="email"
                   name="email"
                   label="Email"
+                  value={this.state.email}
+                  onChange={this.handleChange}
                   fullWidth
                   variant="outlined"
                   autoComplete="email"
@@ -75,7 +87,6 @@ class ContactForm extends Component {
                     classes: {
                       root: classes.cssLabel,
                       focused: classes.cssFocused,
-
                     },
                   }}
                   InputProps={{
@@ -93,6 +104,8 @@ class ContactForm extends Component {
                   id="subject"
                   name="subject"
                   label="Subject"
+                  value={this.state.subject}
+                  onChange={this.handleChange}
                   fullWidth
                   variant="outlined"
                   autoComplete="subject"
@@ -100,7 +113,6 @@ class ContactForm extends Component {
                     classes: {
                       root: classes.cssLabel,
                       focused: classes.cssFocused,
-
                     },
                   }}
                   InputProps={{
@@ -118,6 +130,8 @@ class ContactForm extends Component {
                   id="message"
                   name="message"
                   label="Message"
+                  value={this.state.message}
+                  onChange={this.handleChange}
                   fullWidth
                   variant="outlined"
                   autoComplete="message"
@@ -125,7 +139,6 @@ class ContactForm extends Component {
                     classes: {
                       root: classes.cssLabel,
                       focused: classes.cssFocused,
-
                     },
                   }}
                   InputProps={{
@@ -138,11 +151,13 @@ class ContactForm extends Component {
                   }}
                 />
               </Grid>
+              {/* {JSON.stringify(this.state)} */}
               <Grid item xs={12}>
-                <Button>SEND</Button>
+                <Button type="submit">SEND</Button>
               </Grid>
             </Grid>
           </form>
+          <SimpleMap />
         </Paper>
         {/* <Divider className={classes.divider}/> */}
       </React.Fragment>
@@ -156,7 +171,6 @@ const styles = {
     margin: 'auto'
   },
   form: {
-    // width: '65%',
     margin: 'auto',
     padding: 25
   },
@@ -166,7 +180,6 @@ const styles = {
   },
   textField: {
     borderRadius: '4px',
-    // backgroundColor: '#ddd'
   },
   divider: {
     margin: '10px auto',
@@ -185,14 +198,13 @@ const styles = {
     },
   },
   cssFocused: {
-    color: '#fff'
+    color: '#000'
   },
   notchedOutline: {},
   input: {
-    color: '#fff',
+    color: '#000',
   }
 }
-
 
 ContactForm.propTypes = {
   classes: PropTypes.object.isRequired

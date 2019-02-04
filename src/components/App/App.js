@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import {
+  HashRouter as Router,
+  Route,
+  Redirect,
+  Switch,
+} from 'react-router-dom';
 import './App.css';
 
 // FontAwesome
@@ -6,9 +12,8 @@ import './App.css';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faBars } from '@fortawesome/free-solid-svg-icons';
 
+import Home from '../Home/Home';
 import NavBar from '../NavBar/NavBar';
-import PhotoGallery from '../PhotoGallery/PhotoGallery';
-import ContactForm from '../ContactForm/ContactForm';
 import Footer from  '../Footer/Footer';
 
 // library.add(faBars)
@@ -16,12 +21,25 @@ import Footer from  '../Footer/Footer';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <NavBar />
-        <PhotoGallery />
-        <ContactForm />
-        <Footer />
-      </div>
+      <Router>
+        <div className="App">
+          <NavBar />
+          <Switch>
+            <Redirect exact from="/" to="/home" />
+            <Route
+              exact
+              path="/home"
+              component={Home}
+            />
+            <Route
+              exact
+              path="/services"
+              // component={}
+            />
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }
