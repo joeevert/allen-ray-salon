@@ -18,7 +18,7 @@ class ContactForm extends Component {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   }
 
   handleChange = (event) => {
