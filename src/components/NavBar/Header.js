@@ -25,7 +25,7 @@ const styles = {
   logoContainer: {
     margin: 'auto',
     padding: '55px 0px',
-    maxWidth: '55%',
+    maxWidth: '75%',
   },
   logo: {
     width: '100%',

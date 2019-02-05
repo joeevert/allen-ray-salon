@@ -9,9 +9,12 @@ li {
   padding: 0px;
 }
 
+.topNav-bg {
+  background-color: hsla(0, 0%, 25%, 1);
+}
+
 .topNav {
-  /* position: sticky; */
-  /* top: 0; */
+  padding: 15px;
 }
 
 .topNav a {

@@ -6,6 +6,7 @@ import {
   Switch,
 } from 'react-router-dom';
 import './App.css';
+import Sticky from 'react-sticky-el';
 
 // FontAwesome
 // import { library } from '@fortawesome/fontawesome-svg-core';
@@ -13,6 +14,8 @@ import './App.css';
 // import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import Home from '../Home/Home';
+import Header from '../NavBar/Header';
+
 import NavBar from '../NavBar/NavBar';
 import Footer from  '../Footer/Footer';
 
@@ -23,7 +26,10 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <NavBar />
+          <Header />
+          <Sticky style={{zIndex: 100}}>
+            <NavBar />
+          </Sticky>
           <Switch>
             <Redirect exact from="/" to="/home" />
             <Route

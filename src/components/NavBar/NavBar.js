@@ -29,11 +29,10 @@ class NavBar extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <section>
-        <Header />
-        <Navbar light expand="md">
-          {/* <NavbarToggler style={{backgroundColor: '#fff', margin: 'auto'}} onClick={this.toggle} /> */}
-          {/* <Collapse isOpen={this.state.isOpen} navbar> */}
+      <section className="topNav-bg">
+        <Navbar light expand="md" style={{padding: 0}}>
+          <NavbarToggler style={{backgroundColor: '#fff', margin: '10px auto'}} onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto topNav" navbar>
               <NavItem>
                 <NavLink className="text-white" href="#home">HOME</NavLink>
@@ -54,7 +53,7 @@ class NavBar extends Component {
                 <NavLink className="text-white" href="#careers">CAREERS</NavLink>
               </NavItem>
             </Nav>
-          {/* </Collapse> */}
+          </Collapse>
         </Navbar>
       </section>
     );
