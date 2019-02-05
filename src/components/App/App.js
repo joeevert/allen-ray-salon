@@ -19,6 +19,9 @@ import Header from '../NavBar/Header';
 import NavBar from '../NavBar/NavBar';
 import Footer from  '../Footer/Footer';
 import Stylists from '../Stylists/Stylists';
+import About from '../About/About';
+import Reviews from '../Reviews/Reviews';
+import Careers from '../Careers/Careers';
 
 // library.add(faBars)
 
@@ -47,6 +50,21 @@ class App extends Component {
               exact
               path="/stylists"
               component={Stylists}
+            />
+            <Route
+              exact
+              path="/about"
+              component={About}
+            />
+            <Route
+              exact
+              path="/reviews"
+              component={Reviews}
+            />
+            <Route
+              exact
+              path="/careers"
+              component={Careers}
             />
           </Switch>
           <Footer />
