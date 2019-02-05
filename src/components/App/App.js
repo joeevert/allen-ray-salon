@@ -14,10 +14,11 @@ import Sticky from 'react-sticky-el';
 // import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import Home from '../Home/Home';
+import Services from '../Services/Services';
 import Header from '../NavBar/Header';
-
 import NavBar from '../NavBar/NavBar';
 import Footer from  '../Footer/Footer';
+import Stylists from '../Stylists/Stylists';
 
 // library.add(faBars)
 
@@ -40,7 +41,12 @@ class App extends Component {
             <Route
               exact
               path="/services"
-              // component={}
+              component={Services}
+            />
+            <Route
+              exact
+              path="/stylists"
+              component={Stylists}
             />
           </Switch>
           <Footer />
