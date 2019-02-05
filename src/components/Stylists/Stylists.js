@@ -8,14 +8,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
-// import tileData from './tileData';
+import Avatar from '@material-ui/core/Avatar';
 
 const stylists = [
   {
@@ -48,75 +41,55 @@ class Stylists extends Component {
   render() {
     const { classes } = this.props;
     return (
-      // <div>
-      //   {stylists.map((stylist, index) => 
-      //   <Card key={index} className={classes.card}>
-      //     <CardActionArea>
-      //       <CardMedia
-      //         className={classes.media}
-      //         image={`images/stylist_${stylist.name}.png`}
-      //         title={stylist.name}
-      //       />
-      //       <CardContent>
-      //         <Typography gutterBottom variant="h5" component="h2">
-      //           {stylist.name}
-      //         </Typography>
-      //         <Typography component="p">
-      //           {stylist.bio}
-      //         </Typography>
-      //       </CardContent>
-      //     </CardActionArea>
-      //   </Card>
-      //   )}
-      // </div>
-      <div className={classes.root}>
-        <GridList cellHeight={300} cols={1} className={classes.gridList}>
-          {stylists.map((stylist, index) => (
-            <GridListTile key={index}>
-              <img src={`images/stylist_${stylist.name}.png`} alt={stylist.name} />
-              <GridListTileBar
-                title={stylist.name}
-                subtitle={<span>{stylist.position}</span>}
-                actionIcon={
-                  <IconButton className={classes.icon}>
-                    <InfoIcon />
-                  </IconButton>
-                }
-              />
-            </GridListTile>
-          ))}
-        </GridList>
+      <div>
+        {stylists.map((stylist, index) => 
+        <div className={classes.container} key={index}>
+        <Avatar alt={stylist.name} src={`images/stylist_${stylist.name}.png`} className={classes.bigAvatar} />
+        <Card className={classes.card}>
+          <CardContent>
+            <Typography gutterBottom variant="h4" component="h4">
+              {stylist.name}
+            </Typography>
+            <Typography gutterBottom variant="h6" component="h6">
+              {stylist.position}
+            </Typography>
+            <Typography className={classes.bio} component="p">
+              {stylist.bio}
+            </Typography>
+          </CardContent>
+        </Card>
+        </div>
+        )}
       </div>
     );
   }
 }
 
-// const styles= {
-//   card: {
-//     maxWidth: 400,
-//     margin: 25
-//   },
-//   media: {
-//     height: 140,
-//     width: '100%'
-//   },
-// }
-
-const styles = theme => ({
-  root: {
-    // display: 'flex',
-    // flexWrap: 'wrap',
-    // justifyContent: 'space-around',
-    // overflow: 'hidden',
-    // backgroundColor: theme.palette.background.paper,
+const styles= {
+  card: {
+    display: 'inline-block',
+    maxWidth: '500px',
+    paddingTop: '100px',
   },
-  gridList: {
-    width: 500,
-    height: 450,
+  bigAvatar: {
+    margin: 'auto',
+    transform: 'translate3d(0, 50%, 0)',
+    width: '200px',
+    height: '200px',
+    border: 'solid #fff 5px',
+    boxShadow: '0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
   },
-  icon: {
-    color: 'rgba(255, 255, 255, 0.54)',
+  container: {
+    width: '100%',
+    position: 'relative',
+    minHeight: '1px',
+    flexBasis: 'auto',
+    paddingLeft: '15px',
+    paddingRight: '15px'
   },
-});
+  bio: {
+    // textAlign: 'left'
+  }
+}
 
 export default withStyles(styles)(Stylists);
