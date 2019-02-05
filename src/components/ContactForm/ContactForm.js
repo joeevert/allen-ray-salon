@@ -133,6 +133,8 @@ class ContactForm extends Component {
                   value={this.state.message}
                   onChange={this.handleChange}
                   fullWidth
+                  multiline
+                  rows="4"
                   variant="outlined"
                   autoComplete="message"
                   InputLabelProps={{
@@ -153,7 +155,7 @@ class ContactForm extends Component {
               </Grid>
               {/* {JSON.stringify(this.state)} */}
               <Grid item xs={12}>
-                <Button type="submit">SEND</Button>
+                <Button type="submit" fullWidth>SEND</Button>
               </Grid>
             </Grid>
           </form>
